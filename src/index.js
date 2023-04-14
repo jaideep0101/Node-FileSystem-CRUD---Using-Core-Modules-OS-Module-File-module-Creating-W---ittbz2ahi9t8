@@ -11,12 +11,14 @@ const myFileWriter = async (fileName, fileContent) => {
 }
 
 const myFileReader = async (fileName) => {
-	fs.readFile(fileName,'utf8',(error,data)=>{
-		if(error){
-		console.log(error);
-		}else{
-		console.log(`${fileName}${data} `)
-		}
+	fs.readFile(fileName,'utf-8',(error)=>{
+	if(error){
+	console.log(error);
+	}else
+	{
+		console.log(`${fileName}`);
+	}
+	
 	})
 }
 
