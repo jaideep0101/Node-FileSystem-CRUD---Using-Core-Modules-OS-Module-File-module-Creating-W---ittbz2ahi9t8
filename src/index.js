@@ -1,24 +1,44 @@
 const fs = require('fs/promises')
 
 const myFileWriter = async (fileName, fileContent) => {
-	// write code here
-	// dont chnage function name
+	fs.myFileWriter((error)=>{
+		if(error){
+		console.log(error);
+		}else{
+		console.log(`${fileName} ${fileContent}`)
+		}
+	})
 }
 
 const myFileReader = async (fileName) => {
-	// write code here
-	// dont chnage function name
+	fs.myFileReader((error)=>{
+		if(error){
+		console.log(error);
+		}else{
+		console.log(`${fileName} `)
+		}
+	})
 }
 
 
 const myFileUpdater = async (fileName, fileContent) => {
-	// write code here
-	// dont chnage function name
+	fs.myFileUpdater((error)=>{
+		if(error){
+		console.log(error);
+		}else{
+		console.log(`${fileName} ${fileContent}`)
+		}
+	})
 }
 
 const myFileDeleter = async (fileName) => {
-	// write code here
-	// dont chnage function name
+	fs.myFileDeleter((error)=>{
+		if(error){
+		console.log(error);
+		}else{
+		console.log(`${fileName}`)
+		}
+	})
 }
 
 
