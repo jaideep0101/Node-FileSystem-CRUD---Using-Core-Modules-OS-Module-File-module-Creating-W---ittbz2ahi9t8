@@ -11,7 +11,7 @@ const myFileWriter = async (fileName, fileContent) => {
 }
 
 const myFileReader = async (fileName) => {
-	fs.readFile(fileName,(error,data)=>{
+	fs.readFile(fileName,'utf8',(error,data)=>{
 		if(error){
 		console.log(error);
 		}else{
