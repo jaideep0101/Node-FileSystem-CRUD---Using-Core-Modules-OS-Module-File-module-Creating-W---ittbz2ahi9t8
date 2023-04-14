@@ -1,7 +1,7 @@
 const fs = require('fs/promises')
 
 const myFileWriter = async (fileName, fileContent) => {
-	fs.writeFile((error)=>{
+	fs.writeFile(fileName, fileContent,(error)=>{
 		if(error){
 		console.log(error);
 		}else{
@@ -11,7 +11,7 @@ const myFileWriter = async (fileName, fileContent) => {
 }
 
 const myFileReader = async (fileName) => {
-	fs.readFile((error)=>{
+	fs.readFile(fileName,(error)=>{
 		if(error){
 		console.log(error);
 		}else{
@@ -22,7 +22,7 @@ const myFileReader = async (fileName) => {
 
 
 const myFileUpdater = async (fileName, fileContent) => {
-	fs.appendFile((error)=>{
+	fs.appendFile(fileName, fileContent,(error)=>{
 		if(error){
 		console.log(error);
 		}else{
@@ -32,7 +32,7 @@ const myFileUpdater = async (fileName, fileContent) => {
 }
 
 const myFileDeleter = async (fileName) => {
-	fs.unlink((error)=>{
+	fs.unlink(fileName,(error)=>{
 		if(error){
 		console.log(error);
 		}else{
