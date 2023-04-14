@@ -11,11 +11,11 @@ const myFileWriter = async (fileName, fileContent) => {
 }
 
 const myFileReader = async (fileName) => {
-	fs.readFile(fileName,(error)=>{
+	fs.readFile(fileName,(error,data)=>{
 		if(error){
 		console.log(error);
 		}else{
-		console.log(`${fileName} `)
+		console.log(`${fileName}${data} `)
 		}
 	})
 }
